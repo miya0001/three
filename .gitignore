@@ -6,3 +6,4 @@ npm-debug.log
 release
 src
 vendor
+!src/three-theme.js
