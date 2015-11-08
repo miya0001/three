@@ -1,0 +1,21 @@
+{
+  "name": "three",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/gulp/bin/gulp.js",
+    "test": "./node_modules/gulp/bin/gulp.js test"
+  },
+  "author": "Takayuki Miyauchi",
+  "license": "GPL",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-download": "0.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.4.2",
+    "imagemin-pngquant": "^4.2.0",
+    "three.js": "^0.73.0"
+  }
+}

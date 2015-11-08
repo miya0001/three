@@ -1,0 +1,70 @@
+/*
+Theme Name:     Three
+Theme URI:
+Description:    Twentythirteen child theme.
+Author:         Me
+Author URI:
+Template:       twentythirteen
+Version:        0.1.0
+*/
+
+a:focus, *:focus { outline:none; }
+
+html,body
+{
+	height:100%;
+}
+
+.site
+{
+	height: 100%;
+}
+
+#masthead
+{
+	background-color: #326696;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	font-size:13px;
+	height: 100%;
+	background-image: none;
+	position: relative;
+	text-shadow: 1px 1px 2px #999999;
+}
+
+#masthead a
+{
+	color: #ffffff;
+}
+
+#branding
+{
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: #ffffff;
+	margin: 8px;
+}
+
+#nav-icon
+{
+	display: block;
+	position: absolute;
+	bottom: 40px;
+	left: 0px;
+	color: #ffffff;
+	width: 100%;
+	text-align: center;
+}
+
+#nav-icon .dashicons
+{
+	font-size: 400%;
+}
+
+.navbar
+{
+	display: none;
+}
