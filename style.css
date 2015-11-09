@@ -36,16 +36,18 @@ html,body
 #masthead a
 {
 	color: #ffffff;
+	text-decoration: none;
+	border: none;
 }
 
 #branding
 {
 	display: block;
 	position: absolute;
-	top: 0px;
+	bottom: 80px;
 	left: 0px;
 	color: #ffffff;
-	margin: 8px;
+	margin: 8px 4px;
 }
 
 #nav-icon

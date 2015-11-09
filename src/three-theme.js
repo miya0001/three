@@ -23,7 +23,7 @@ var setObjectQuaternion = function () {
 			beta = 1.2;
 		}
 
-		euler.set( beta, alpha, - gamma, 'YXZ' );                       // 'ZXY' for the device, but 'YXZ' for us
+		euler.set( beta , alpha, -gamma, 'YXZ' );                       // 'ZXY' for the device, but 'YXZ' for us
 		quaternion.setFromEuler( euler );                               // orient the device
 		quaternion.multiply( q1 );                                      // camera looks out the back of the device, not the top
 		quaternion.multiply( q0.setFromAxisAngle( zee, - orient ) );    // adjust for screen orientation
@@ -51,7 +51,7 @@ function init() {
 	document.getElementById( 'masthead' ).appendChild( renderer.domElement );
 
 	scene = new THREE.Scene();
-	camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 1, 1000 );
+	camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 1, 3000 );
 
 	window.addEventListener( 'deviceorientation', setOrientationControls, true );
 
@@ -59,7 +59,7 @@ function init() {
 	texture.magFilter = THREE.LinearMipMapLinearFilter;
 	texture.minFilter = THREE.LinearMipMapLinearFilter;
 
-	var fog = new THREE.Fog( 0x4584b4, - 100, 3000 );
+	var fog = new THREE.Fog( 0x326696, -100, 3000 );
 
 	material = new THREE.ShaderMaterial( {
 		uniforms: {
@@ -116,8 +116,6 @@ function onWindowResize( event ) {
 
 function animate() {
 	position = ( ( Date.now() - start_time ) * 0.01 ) % 8000;
-	camera.position.x = camera.position.x * 0.01;
-	camera.position.y = camera.position.y * 0.01;
 	camera.position.z = -position + 8000;
 	if ( enable_animate ) {
 		controls.device_update();
