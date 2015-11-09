@@ -23,6 +23,7 @@ bower.json
 gulpfile.js
 node_modules
 package.json
+README.md
 tests" > .gitignore
 
 git init
