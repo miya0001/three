@@ -1,11 +1,15 @@
 /*
-Theme Name:     Three
-Theme URI:
-Description:    Twentythirteen child theme.
-Author:         Me
-Author URI:
-Template:       twentythirteen
-Version:        0.1.0
+Theme Name: Three
+Theme URI: https://github.com/miya0001/three
+Author: miyauchi
+Author URI: http://firegoby.jp/
+Description: Three theme is a child theme of Twenty Thirteen . It has a full-screen 3D effect.
+Template: twentythirteen
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0.0
+Tags: black, blue, white, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, translation-ready
+Text Domain: three
 */
 
 a:focus, *:focus
@@ -30,11 +34,16 @@ html,body
 	margin: 0px;
 	padding: 0px;
 	font-size:13px;
-	height: 100%;
 	background-image: none;
 	position: relative;
 	text-shadow: 1px 1px 2px #555555;
 	width: 100%;
+	height: 300px;
+}
+
+.home #masthead
+{
+	height: 100%;
 }
 
 #three
@@ -57,10 +66,16 @@ html,body
 	display: block;
 	width: 100%;
 	min-width: 100%;
+	color: #ffffff;
 	position: absolute;
 	left: 0px;
+	bottom: 20px;
+	min-height: auto;
+}
+
+.home #masthead .home-link
+{
 	bottom: 80px;
-	color: #ffffff;
 }
 
 #masthead .home-link h1,
@@ -116,7 +131,8 @@ html,body
 .nav-menu .sub-menu,
 .nav-menu .children
 {
-	background-color: #000000;
+	background-color: #5382AC;
+	box-shadow: 1px 1px 1px 1px rgba( 0, 0, 0, 0.1 );
 }
 
 .nav-menu .sub-menu,

@@ -52,7 +52,20 @@ function three_theme_enqueue_styles() {
 add_action( "wp_head", "three_theme_wp_head" );
 
 function three_theme_wp_head() {
-	echo '<script type="text/javascript">var three_theme_root = "' . esc_js( get_stylesheet_directory_uri() ) . '";</script>';
+?>
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<script type="text/javascript">
+		var three_theme_root = "<?php echo esc_js( get_stylesheet_directory_uri() ); ?>";
+		<?php if ( is_home() ): ?>
+		var is_home = true;
+		<?php else: ?>
+		var is_home = false;
+		<?php endif; ?>
+	</script>
+<?php
 }
 
 add_action( "wp_footer", "three_theme_wp_footer" );
@@ -82,16 +95,5 @@ function three_theme_wp_footer() {
 		gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );
 	}
 </script>
-<?php
-}
-
-add_action( 'wp_head', 'three_wp_head' );
-
-function three_wp_head() {
-?>
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <?php
 }

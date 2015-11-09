@@ -1,3 +1,20 @@
+( function( $ ){
+	if ( $( '.home' ).length ) {
+		var nav_icon = $( '<div id="nav-icon" />' );
+		nav_icon.html( '<a class="scroll" data-speed="1000" href="#main"><span class="dashicons dashicons-arrow-down-alt2"></span></a>' );
+		$( '#masthead' ).append( nav_icon );
+
+		$( 'a.scroll' ).click( function() {
+			var speed = 500;
+			var href= $( this ).attr( "href" );
+			var target = $( href == "#" || href == "" ? 'html' : href );
+			var position = target.offset().top;
+			$( "html, body" ).animate( { scrollTop:position }, speed, "swing" );
+			return false;
+		} );
+	}
+} )( jQuery );
+
 
 if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
@@ -34,18 +51,21 @@ var container;
 var camera, scene, renderer, controls, enable_orientation_controls;
 var mesh, geometry, material;
 
-var mouseX = 0, mouseY = 0;
 var start_time = Date.now();
 
-var windowHalfX = window.innerWidth / 2;
-var windowHalfY = window.innerHeight / 2;
+var windowHeight;
+if ( is_home ) {
+	windowHeight = window.innerHeight;
+} else {
+	windowHeight = jQuery( '#masthead' ).height();
+}
 
 init();
 
 function init() {
 	renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
 	renderer.setPixelRatio( window.devicePixelRatio );
-	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setSize( window.innerWidth, windowHeight );
 
 	var three = document.createElement('div');
 	three.id = 'three';
@@ -53,7 +73,7 @@ function init() {
 	document.getElementById( 'masthead' ).appendChild( three );
 
 	scene = new THREE.Scene();
-	camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 1, 1000 );
+	camera = new THREE.PerspectiveCamera( 30, window.innerWidth / windowHeight, 1, 1000 );
 
 	window.addEventListener( 'deviceorientation', setOrientationControls, true );
 
@@ -112,9 +132,9 @@ function setOrientationControls( e ) {
 }
 
 function onWindowResize( event ) {
-	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.aspect = window.innerWidth / windowHeight;
 	camera.updateProjectionMatrix();
-	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setSize( window.innerWidth, windowHeight );
 }
 
 function animate() {
@@ -126,18 +146,3 @@ function animate() {
 	requestAnimationFrame( animate );
 	renderer.render( scene, camera );
 }
-
-( function( $ ){
-	var nav_icon = $( '<div id="nav-icon" />' );
-	nav_icon.html( '<a class="scroll" data-speed="1000" href="#main"><span class="dashicons dashicons-arrow-down-alt2"></span></a>' );
-	$( '#masthead' ).append( nav_icon );
-
-	$( 'a.scroll' ).click( function() {
-		var speed = 500;
-		var href= $( this ).attr( "href" );
-		var target = $( href == "#" || href == "" ? 'html' : href );
-		var position = target.offset().top;
-		$( "html, body" ).animate( { scrollTop:position }, speed, "swing" );
-		return false;
-	} );
-} )( jQuery );
