@@ -1,0 +1,174 @@
+/*
+Theme Name: Three
+Theme URI: https://github.com/miya0001/three
+Author: miyauchi
+Author URI: http://firegoby.jp/
+Description: Three theme is a child theme of Twenty Thirteen . It has a full-screen 3D effect.
+Template: twentythirteen
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0.0
+Tags: black, blue, white, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, translation-ready
+Text Domain: three
+*/
+
+a:focus, *:focus
+{
+	outline:none;
+}
+
+html,body
+{
+	height:100%;
+}
+
+.site
+{
+	height: 100%;
+	max-width: 100%;
+}
+
+#masthead
+{
+	background-color: #326696;
+	margin: 0px;
+	padding: 0px;
+	font-size:13px;
+	background-image: none;
+	position: relative;
+	text-shadow: 1px 1px 2px #555555;
+	width: 100%;
+	height: 300px;
+}
+
+.home #masthead
+{
+	height: 100%;
+}
+
+#three
+{
+	max-width: 100%;
+	height: 100%;
+	max-height: 100%;
+	overflow: hidden;
+}
+
+#masthead a
+{
+	color: #ffffff;
+	text-decoration: none;
+	border: none;
+}
+
+#masthead .home-link
+{
+	display: block;
+	width: 100%;
+	min-width: 100%;
+	color: #ffffff;
+	position: absolute;
+	left: 0px;
+	bottom: 20px;
+	min-height: auto;
+}
+
+.home #masthead .home-link
+{
+	bottom: 80px;
+}
+
+#masthead .home-link h1,
+#masthead .home-link h2
+{
+	margin: 0 auto;
+	max-width: 1080px;
+}
+
+#nav-icon
+{
+	display: block;
+	position: absolute;
+	bottom: 40px;
+	left: 0px;
+	color: #ffffff;
+	width: 100%;
+	text-align: center;
+}
+
+#nav-icon .dashicons
+{
+	font-size: 400%;
+}
+
+.navbar
+{
+	background: none !important;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: #ffffff !important;
+	z-index: 9999;
+}
+
+.navbar a
+{
+	color: #ffffff;
+}
+
+.site-header .search-field
+{
+	background-image: url(img/search-icon.png);
+}
+
+.site-header .search-field:focus {
+	background-image: url(../twentythirteen/images/search-icon.png);
+}
+
+.nav-menu li:hover > a,
+.nav-menu li a:hover,
+.nav-menu li:focus > a,
+.nav-menu .sub-menu,
+.nav-menu .children
+{
+	background-color: #5382AC;
+	box-shadow: 1px 1px 1px 1px rgba( 0, 0, 0, 0.1 );
+}
+
+.nav-menu .sub-menu,
+.nav-menu .children
+{
+	border: none;
+	left: 0;
+}
+
+.site-footer .sidebar-container
+{
+	background-color: #000000;
+}
+
+.site-footer
+{
+	color: #ffffff;
+}
+
+.site-footer a
+{
+	color: #ffffff;
+}
+
+@media ( max-width: 643px )
+{
+	.menu-toggle,
+	.menu-toggle:hover,
+	.menu-toggle:focus,
+	.menu-toggle:active
+	{
+		color: #ffffff;
+	}
+
+	.nav-menu
+	{
+		background-color: #000000;
+	}
+}
