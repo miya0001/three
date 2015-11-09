@@ -1,5 +1,11 @@
 <?php
 
+add_action( 'after_setup_theme', 'three_theme_after_setup_theme' );
+
+function three_theme_after_setup_theme() {
+	remove_action( 'after_setup_theme', 'twentythirteen_custom_header_setup', 11 );
+}
+
 add_action( 'wp_enqueue_scripts', 'three_theme_enqueue_styles' );
 
 function three_theme_enqueue_styles() {
