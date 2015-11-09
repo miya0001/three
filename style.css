@@ -8,7 +8,10 @@ Template:       twentythirteen
 Version:        0.1.0
 */
 
-a:focus, *:focus { outline:none; }
+a:focus, *:focus
+{
+	outline:none;
+}
 
 html,body
 {
@@ -18,6 +21,7 @@ html,body
 .site
 {
 	height: 100%;
+	max-width: 100%;
 }
 
 #masthead
@@ -25,12 +29,20 @@ html,body
 	background-color: #326696;
 	margin: 0px;
 	padding: 0px;
-	overflow: hidden;
 	font-size:13px;
 	height: 100%;
 	background-image: none;
 	position: relative;
 	text-shadow: 1px 1px 2px #555555;
+	width: 100%;
+}
+
+#three
+{
+	max-width: 100%;
+	height: 100%;
+	max-height: 100%;
+	overflow: hidden;
 }
 
 #masthead a
@@ -40,14 +52,22 @@ html,body
 	border: none;
 }
 
-#branding
+#masthead .home-link
 {
 	display: block;
+	width: 100%;
+	min-width: 100%;
 	position: absolute;
-	bottom: 80px;
 	left: 0px;
+	bottom: 80px;
 	color: #ffffff;
-	margin: 8px 4px;
+}
+
+#masthead .home-link h1,
+#masthead .home-link h2
+{
+	margin: 0 auto;
+	max-width: 1080px;
 }
 
 #nav-icon
@@ -68,5 +88,71 @@ html,body
 
 .navbar
 {
-	display: none;
+	background: none !important;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: #ffffff !important;
+	z-index: 9999;
+}
+
+.navbar a
+{
+	color: #ffffff;
+}
+
+.site-header .search-field
+{
+	background-image: url(img/search-icon.png);
+}
+
+.site-header .search-field:focus {
+	background-image: url(../twentythirteen/images/search-icon.png);
+}
+
+.nav-menu li:hover > a,
+.nav-menu li a:hover,
+.nav-menu li:focus > a,
+.nav-menu .sub-menu,
+.nav-menu .children
+{
+	background-color: #000000;
+}
+
+.nav-menu .sub-menu,
+.nav-menu .children
+{
+	border: none;
+	left: 0;
+}
+
+.site-footer .sidebar-container
+{
+	background-color: #000000;
+}
+
+.site-footer
+{
+	color: #ffffff;
+}
+
+.site-footer a
+{
+	color: #ffffff;
+}
+
+@media ( max-width: 643px )
+{
+	.menu-toggle,
+	.menu-toggle:hover,
+	.menu-toggle:focus,
+	.menu-toggle:active
+	{
+		color: #ffffff;
+	}
+
+	.nav-menu
+	{
+		background-color: #000000;
+	}
 }

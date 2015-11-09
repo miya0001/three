@@ -7,7 +7,7 @@ function three_theme_enqueue_styles() {
 
 	wp_enqueue_style(
 		'twentythirteen-style',
-		get_template_directory_uri() . '/style.css'
+		get_stylesheet_directory_uri() . '/twentythirteen.css'
 	);
 
 	wp_enqueue_style(
@@ -82,5 +82,16 @@ function three_theme_wp_footer() {
 		gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );
 	}
 </script>
+<?php
+}
+
+add_action( 'wp_head', 'three_wp_head' );
+
+function three_wp_head() {
+?>
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <?php
 }

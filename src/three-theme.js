@@ -47,7 +47,10 @@ function init() {
 	renderer.setPixelRatio( window.devicePixelRatio );
 	renderer.setSize( window.innerWidth, window.innerHeight );
 
-	document.getElementById( 'masthead' ).appendChild( renderer.domElement );
+	var three = document.createElement('div');
+	three.id = 'three';
+	three.appendChild( renderer.domElement );
+	document.getElementById( 'masthead' ).appendChild( three );
 
 	scene = new THREE.Scene();
 	camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 1, 1000 );
@@ -95,6 +98,7 @@ function init() {
 	scene.add( mesh );
 
 	window.addEventListener( 'resize', onWindowResize, false );
+	window.addEventListener( 'orientationchange', onWindowResize, false );
 }
 
 function setOrientationControls( e ) {
@@ -124,6 +128,10 @@ function animate() {
 }
 
 ( function( $ ){
+	var nav_icon = $( '<div id="nav-icon" />' );
+	nav_icon.html( '<a class="scroll" data-speed="1000" href="#main"><span class="dashicons dashicons-arrow-down-alt2"></span></a>' );
+	$( '#masthead' ).append( nav_icon );
+
 	$( 'a.scroll' ).click( function() {
 		var speed = 500;
 		var href= $( this ).attr( "href" );
