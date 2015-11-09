@@ -4,6 +4,8 @@
 
 Three theme is a child theme of Twenty Thirteen . It has a full-screen 3D effect.
 
+![](https://raw.githubusercontent.com/miya0001/three/master/screenshot.png)
+
 ## How to build
 
 ```
