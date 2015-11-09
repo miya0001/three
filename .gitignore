@@ -4,4 +4,6 @@ js
 node_modules
 npm-debug.log
 release
+src
+!src/three-theme.js
 vendor
