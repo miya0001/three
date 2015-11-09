@@ -43,15 +43,14 @@ var windowHalfY = window.innerHeight / 2;
 init();
 
 function init() {
-	renderer = new THREE.WebGLRenderer( { antialias: false } );
+	renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
 	renderer.setPixelRatio( window.devicePixelRatio );
 	renderer.setSize( window.innerWidth, window.innerHeight );
-	renderer.setClearColor( new THREE.Color( 0x326696 ) );
 
 	document.getElementById( 'masthead' ).appendChild( renderer.domElement );
 
 	scene = new THREE.Scene();
-	camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 1, 3000 );
+	camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 1, 1000 );
 
 	window.addEventListener( 'deviceorientation', setOrientationControls, true );
 
@@ -59,7 +58,7 @@ function init() {
 	texture.magFilter = THREE.LinearMipMapLinearFilter;
 	texture.minFilter = THREE.LinearMipMapLinearFilter;
 
-	var fog = new THREE.Fog( 0x326696, -100, 3000 );
+	var fog = new THREE.Fog( 0x326696, -100, 1000 );
 
 	material = new THREE.ShaderMaterial( {
 		uniforms: {
