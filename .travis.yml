@@ -1,4 +1,17 @@
-language: php
-php:
-- '5.5'
-- '5.4'
+language: node_js
+
+branches:
+  only:
+    - master
+
+before_script: bash ./bin/build.sh
+
+script:
+    - ls -alF js/three-theme.min.js
+
+after_success: bash ./bin/deploy.sh
+
+env:
+  global:
+  - GH_REF: github.com/miya0001/three.git
+  - secure: "mqrjLK06UBelYGbmt8TJcOmFLcW7meV6wSwxqVz1EMBOhRVnHsfGo+dTYsbK+vxIPDsvLMfxiTA1RSimCF66R7LDULng1d6dxDBBE53pcerYN//h5bks1y8OmkicqlAm4xQEXdIBX3xa1jDLYIWD/7cDagXEFGk8/7Jdcv+btjff39TVlN9auYuVlFX4NzaWby6czIgfbDRdngqAxMcYLqoOo6hyN9DwHD42dKsXAdbvcVhEq76bWpXRhtsMd3kCUzLsbFjndz3zXeNbgnThGuBhl9fBshlm+/+tGmNq57CrveaZcfwA1hLb5XgsRe4iTSP0tGcnbZOUws2zr3TIQ8IMiFTeWL5543oC+ZZRhp/REh30qtOT5a6szs4xziZXU0WE+OD/NS5kvev+SAvHgthcnbMdXMl8Q10yFTm/U9MGjYD2dLqKVz633s/zYuGNf/0E2BU+TNqG1nhkVXCfXnVrvl8zGCkNmiDHt4QXnHj6WmfPDGHfpP46asFPU4Dy1KACxrVg+rZ8IFVWJJjokxhfY3LC9G8juMIoEGQiKYGSmbTRX2i+2ifs5yC0s6SHbSr3aWI3EHjk2X7LbnSKHr5z1krXZcGECN0QZwI/DJEwcNN76vrjMKl+VhfrP9GjO1mGUMIFFSsR8CaNsukJMmBvyp0brChkcwoZpU6Ou4A="
