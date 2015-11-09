@@ -14,3 +14,8 @@ $ cd three
 $ npm install
 $ npm run build
 ```
+
+## Many thanks!
+
+* http://threejs.org/
+* https://github.com/mrdoob/three.js/
