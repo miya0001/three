@@ -31,7 +31,7 @@ var setObjectQuaternion = function () {
 }();
 
 var container;
-var camera, scene, renderer, controls, enable_animate;
+var camera, scene, renderer, controls, enable_orientation_controls;
 var mesh, geometry, material;
 
 var mouseX = 0, mouseY = 0;
@@ -102,7 +102,7 @@ function setOrientationControls( e ) {
 		return;
 	}
 
-	enable_animate = true;
+	enable_orientation_controls = true;
 	controls = new THREE.DeviceOrientationControls( camera, true );
 	window.removeEventListener( 'deviceorientation', setOrientationControls, true );
 }
@@ -116,7 +116,7 @@ function onWindowResize( event ) {
 function animate() {
 	position = ( ( Date.now() - start_time ) * 0.01 ) % 8000;
 	camera.position.z = -position + 8000;
-	if ( enable_animate ) {
+	if ( enable_orientation_controls ) {
 		controls.device_update();
 	}
 	requestAnimationFrame( animate );
