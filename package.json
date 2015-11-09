@@ -15,7 +15,6 @@
     "gulp-download": "0.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.4.2",
-    "imagemin-pngquant": "^4.2.0",
     "three.js": "^0.73.0"
   }
 }

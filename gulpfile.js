@@ -1,7 +1,6 @@
 'use strict';
 
 var gulp = require( 'gulp' );
-var pngquant = require( 'imagemin-pngquant' );
 var download = require("gulp-download");
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
