@@ -26,8 +26,8 @@ gulp.task( 'default', [ 'download', 'npm' ], function(){
 		  'src/*.js'
 	  ] )
 	  .pipe( uglify() )
-			.pipe(rename({
+	  .pipe( rename( {
 		  extname: '.min.js'
-		}))
+	  } ) )
 	  .pipe( gulp.dest( 'js' ) );
 } );
