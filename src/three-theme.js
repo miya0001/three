@@ -73,7 +73,7 @@ function init() {
 	document.getElementById( 'masthead' ).appendChild( three );
 
 	scene = new THREE.Scene();
-	camera = new THREE.PerspectiveCamera( 30, window.innerWidth / windowHeight, 1, 1000 );
+	camera = new THREE.PerspectiveCamera( 30, window.innerWidth / windowHeight, 1, 500 );
 
 	window.addEventListener( 'deviceorientation', setOrientationControls, true );
 
@@ -81,7 +81,7 @@ function init() {
 	texture.magFilter = THREE.LinearMipMapLinearFilter;
 	texture.minFilter = THREE.LinearMipMapLinearFilter;
 
-	var fog = new THREE.Fog( 0x326696, -100, 1000 );
+	var fog = new THREE.Fog( 0x326696, 100, 500 );
 
 	material = new THREE.ShaderMaterial( {
 		uniforms: {
@@ -100,9 +100,9 @@ function init() {
 	var geometry = new THREE.Geometry();
 	var plane = new THREE.Mesh( new THREE.PlaneGeometry( 64, 64 ) );
 
-	for ( var i = 0; i < 8000; i++ ) {
+	for ( var i = 0; i < 2000; i++ ) {
 		plane.position.x = Math.random() * 1000 - 500;
-		plane.position.y = - Math.random() * Math.random() * 200 - 50;
+		plane.position.y = - Math.random() * Math.random() * 200 - 20;
 		plane.position.z = i;
 		plane.rotation.z = Math.random() * Math.PI;
 		plane.scale.x = plane.scale.y = Math.random() * Math.random() * 1.5 + 0.5;
@@ -114,7 +114,7 @@ function init() {
 	scene.add( mesh );
 
 	mesh = new THREE.Mesh( geometry, material );
-	mesh.position.z = - 8000;
+	mesh.position.z = -500;
 	scene.add( mesh );
 
 	window.addEventListener( 'resize', onWindowResize, false );
@@ -138,8 +138,8 @@ function onWindowResize( event ) {
 }
 
 function animate() {
-	position = ( ( Date.now() - start_time ) * 0.01 ) % 8000;
-	camera.position.z = -position + 8000;
+	position = ( ( Date.now() - start_time ) * 0.01 ) % 2000;
+	camera.position.z = -position + 2000;
 	if ( enable_orientation_controls ) {
 		controls.device_update();
 	}
