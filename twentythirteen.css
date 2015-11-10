@@ -1000,7 +1000,7 @@ ul.nav-menu .focus > ul,
 .entry-summary,
 .entry-meta {
 	margin: 0 auto;
-	max-width: 920px;
+	max-width: 750px;
 	width: 100%;
 }
 
@@ -1774,7 +1774,7 @@ footer.entry-meta {
 	clear: none;
 	color: inherit;
 	float: right;
-	max-width: 920px;
+	max-width: 750px;
 	padding: 9px 0 0;
 	text-align: right;
 }
@@ -1858,7 +1858,7 @@ footer.entry-meta {
 
 .attachment .entry-description {
 	margin: 20px auto 0;
-	max-width: 920px;
+	max-width: 750px;
 }
 
 .attachment .entry-caption p:last-child,
@@ -1912,7 +1912,7 @@ footer.entry-meta {
 
 .paging-navigation .nav-links {
 	margin: 0 auto;
-	max-width: 920px;
+	max-width: 750px;
 	width: 100%;
 }
 
@@ -1988,7 +1988,7 @@ footer.entry-meta {
 
 .author-info {
 	margin: 0 auto;
-	max-width: 920px;
+	max-width: 750px;
 	padding: 30px 0 10px;
 	text-align: left; /* gallery & video post formats */
 	width: 100%;
@@ -2078,7 +2078,7 @@ footer.entry-meta {
 
 .page-content {
 	margin: 0 auto;
-	max-width: 920px;
+	max-width: 750px;
 	padding: 40px 0;
 	width: 100%;
 }
@@ -2146,7 +2146,7 @@ footer.entry-meta {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 920px;
+	max-width: 750px;
 	width: 100%;
 }
 
@@ -2385,7 +2385,7 @@ footer.entry-meta {
 	font-style: italic;
 	font-weight: 300;
 	margin: 0 auto;
-	max-width: 920px;
+	max-width: 750px;
 	padding: 20px 0 30px;
 	width: 100%;
 }
@@ -2413,7 +2413,7 @@ footer.entry-meta {
 
 .site-main .mu_register {
 	margin: 0 auto;
-	max-width: 920px;
+	max-width: 750px;
 	width: 100%;
 }
 
@@ -2665,7 +2665,7 @@ footer.entry-meta {
 
 	.error404 .page-header {
 		margin-left: auto;
-		max-width: 920px;
+		max-width: 750px;
 		width: 100%;
 	}
 
@@ -2720,7 +2720,7 @@ footer.entry-meta {
 	.sidebar .featured-gallery,
 	.sidebar .post-navigation .nav-links,
 	.author.sidebar .author-info {
-		max-width: 920px;
+		max-width: 750px;
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -2730,7 +2730,7 @@ footer.entry-meta {
 	.blog.sidebar .page-content,
 	.attachment .entry-header,
 	.sidebar .comments-title {
-		max-width: 920px;
+		max-width: 750px;
 	}
 
 	.sidebar .archive-meta,
@@ -2784,7 +2784,7 @@ footer.entry-meta {
 	.site-main .sidebar-container {
 		height: auto;
 		margin: 0 auto;
-		max-width: 920px;
+		max-width: 750px;
 		position: relative;
 		top: 20px;
 	}
@@ -2822,7 +2822,7 @@ footer.entry-meta {
 
 	.attachment .image-navigation,
 	.attachment .entry-attachment .attachment {
-		max-width: 920px;
+		max-width: 750px;
 		padding: 0;
 		width: 100%;
 	}

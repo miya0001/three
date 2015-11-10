@@ -1,9 +1,19 @@
 <?php
 
-add_action( 'after_setup_theme', 'three_theme_after_setup_theme' );
+if ( ! isset( $content_width ) )
+	$content_width = 750;
 
-function three_theme_after_setup_theme() {
+add_action( 'after_setup_theme', 'three_theme_after_setup_theme_01' );
+
+function three_theme_after_setup_theme_01() {
 	remove_action( 'after_setup_theme', 'twentythirteen_custom_header_setup', 11 );
+}
+
+add_action( 'after_setup_theme', 'three_theme_after_setup_theme_02', 11 );
+
+function three_theme_after_setup_theme_02() {
+	remove_action( 'after_setup_theme', 'twentythirteen_custom_header_setup', 11 );
+	set_post_thumbnail_size( 750, 270, true );
 }
 
 add_action( 'wp_enqueue_scripts', 'three_theme_enqueue_styles' );

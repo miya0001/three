@@ -99,6 +99,8 @@ html,body
 #nav-icon .dashicons
 {
 	font-size: 400%;
+	display: block;
+	width: 100%;
 }
 
 .navbar
