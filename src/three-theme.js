@@ -100,7 +100,7 @@ function init() {
 	var geometry = new THREE.Geometry();
 	var plane = new THREE.Mesh( new THREE.PlaneGeometry( 64, 64 ) );
 
-	for ( var i = 0; i < 2000; i++ ) {
+	for ( var i = 0; i < 1000; i++ ) {
 		plane.position.x = Math.random() * 1000 - 500;
 		plane.position.y = - Math.random() * Math.random() * 200 - 20;
 		plane.position.z = i;
@@ -132,14 +132,19 @@ function setOrientationControls( e ) {
 }
 
 function onWindowResize( event ) {
+	if ( is_home ) {
+		windowHeight = window.innerHeight;
+	} else {
+		windowHeight = jQuery( '#masthead' ).height();
+	}
 	camera.aspect = window.innerWidth / windowHeight;
 	camera.updateProjectionMatrix();
 	renderer.setSize( window.innerWidth, windowHeight );
 }
 
 function animate() {
-	position = ( ( Date.now() - start_time ) * 0.01 ) % 2000;
-	camera.position.z = -position + 2000;
+	position = ( ( Date.now() - start_time ) * 0.01 ) % 1000;
+	camera.position.z = -position + 1000;
 	if ( enable_orientation_controls ) {
 		controls.device_update();
 	}
