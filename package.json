@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/gulp/bin/gulp.js",
-    "test": "./node_modules/gulp/bin/gulp.js test"
+    "build": "gulp",
+    "test": "gulp test"
   },
   "author": "Takayuki Miyauchi",
   "license": "GPL",
