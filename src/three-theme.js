@@ -143,7 +143,10 @@ function onWindowResize( event ) {
 }
 
 function animate() {
-	position = ( ( Date.now() - start_time ) * 0.01 ) % 8000;
+	var position = ( ( Date.now() - start_time ) * 0.01 ) % 8000;
+	if ( position > 8000 ) {
+		return;
+	}
 	camera.position.z = -position + 8000;
 	if ( enable_orientation_controls ) {
 		controls.device_update();
