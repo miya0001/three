@@ -64,6 +64,7 @@ html,body
 	bottom: 20px;
 	margin: auto;
 	width: 750px;
+	max-width: 100%;
 }
 
 #masthead .home-link h1,
