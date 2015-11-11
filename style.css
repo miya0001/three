@@ -63,7 +63,7 @@ html,body
 	right: 0;
 	bottom: 20px;
 	margin: auto;
-	width: 750px;
+	width: 100%;
 	max-width: 100%;
 }
 
@@ -103,7 +103,7 @@ html,body
 	margin-right: auto;
 	color: #ffffff !important;
 	z-index: 9999;
-	width: 750px;
+	width: 100%;
 	max-width: 100% !important;
 }
 
