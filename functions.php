@@ -55,7 +55,7 @@ function three_theme_enqueue_styles() {
 		'threejs-deviceorientation',
 		get_stylesheet_directory_uri() . '/js/DeviceOrientationControls.min.js',
 		array( 'threejs' ),
-		'1.2.0',
+		'1.3.0',
 		true
 	);
 
