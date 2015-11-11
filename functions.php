@@ -23,20 +23,23 @@ function three_theme_enqueue_styles() {
 
 	wp_enqueue_style(
 		'twentythirteen-style',
-		get_stylesheet_directory_uri() . '/twentythirteen.css'
+		get_stylesheet_directory_uri() . '/twentythirteen.css',
+		array(),
+		'1.3.0'
 	);
 
 	wp_enqueue_style(
 		'three-style',
 		get_stylesheet_directory_uri() . '/style.css',
-		array('twentythirteen-style')
+		array('twentythirteen-style'),
+		'1.3.0'
 	);
 
 	wp_enqueue_script(
 		'threejs',
 		get_stylesheet_directory_uri() . '/js/three.min.js',
 		array(),
-		'1.2.0',
+		'1.3.0',
 		true
 	);
 
@@ -44,7 +47,7 @@ function three_theme_enqueue_styles() {
 		'threejs-detector',
 		get_stylesheet_directory_uri() . '/js/Detector.min.js',
 		array( 'threejs' ),
-		'1.2.0',
+		'1.3.0',
 		true
 	);
 
@@ -60,7 +63,7 @@ function three_theme_enqueue_styles() {
 		'three-theme',
 		get_stylesheet_directory_uri() . '/js/three-theme.min.js',
 		array( 'threejs-detector' ),
-		'1.2.0',
+		'1.3.0',
 		true
 	);
 }
