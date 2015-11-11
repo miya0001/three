@@ -41,11 +41,6 @@ html,body
 	height: 300px;
 }
 
-.home #masthead
-{
-	height: 100%;
-}
-
 #three
 {
 	max-width: 100%;
@@ -63,19 +58,12 @@ html,body
 
 #masthead .home-link
 {
-	display: block;
-	width: 100%;
-	min-width: 100%;
-	color: #ffffff;
 	position: absolute;
-	left: 0px;
+	left: 0;
+	right: 0;
 	bottom: 20px;
-	min-height: auto;
-}
-
-.home #masthead .home-link
-{
-	bottom: 80px;
+	margin: auto;
+	width: 750px;
 }
 
 #masthead .home-link h1,
@@ -87,13 +75,13 @@ html,body
 
 #nav-icon
 {
-	display: block;
 	position: absolute;
 	bottom: 40px;
 	left: 0px;
 	color: #ffffff;
 	width: 100%;
 	text-align: center;
+	display: none;
 }
 
 #nav-icon .dashicons
@@ -109,8 +97,13 @@ html,body
 	position: absolute;
 	top: 0px;
 	left: 0px;
+	right: 0px;
+	margin-left: auto;
+	margin-right: auto;
 	color: #ffffff !important;
 	z-index: 9999;
+	width: 750px;
+	max-width: 100% !important;
 }
 
 .navbar a
@@ -159,6 +152,15 @@ html,body
 	color: #ffffff;
 }
 
+@media ( max-width: 960px )
+{
+	.entry-header, .entry-content, .entry-summary, .entry-meta
+	{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
 @media ( max-width: 643px )
 {
 	.menu-toggle,
@@ -172,5 +174,25 @@ html,body
 	.nav-menu
 	{
 		background-color: #000000;
+	}
+
+	#masthead
+	{
+		height: 250px;
+	}
+
+	.home #masthead
+	{
+		height: 100%;
+	}
+
+	.home #masthead .home-link
+	{
+		bottom: 80px;
+	}
+
+	#nav-icon
+	{
+		display: block;
 	}
 }

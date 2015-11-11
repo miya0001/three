@@ -54,10 +54,10 @@ var mesh, geometry, material;
 var start_time = Date.now();
 
 var windowHeight;
-if ( is_home ) {
-	windowHeight = window.innerHeight;
-} else {
+if ( window.innerHeight > jQuery( '#masthead' ).height() ) {
 	windowHeight = jQuery( '#masthead' ).height();
+} else {
+	windowHeight = window.innerHeight;
 }
 
 init();
@@ -132,11 +132,12 @@ function setOrientationControls( e ) {
 }
 
 function onWindowResize( event ) {
-	if ( is_home ) {
-		windowHeight = window.innerHeight;
-	} else {
+	if ( window.innerHeight > jQuery( '#masthead' ).height() ) {
 		windowHeight = jQuery( '#masthead' ).height();
+	} else {
+		windowHeight = window.innerHeight;
 	}
+
 	camera.aspect = window.innerWidth / windowHeight;
 	camera.updateProjectionMatrix();
 	renderer.setSize( window.innerWidth, windowHeight );
