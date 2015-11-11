@@ -36,7 +36,7 @@ function three_theme_enqueue_styles() {
 		'threejs',
 		get_stylesheet_directory_uri() . '/js/three.min.js',
 		array(),
-		'0.1.0',
+		'1.2.0',
 		true
 	);
 
@@ -44,7 +44,7 @@ function three_theme_enqueue_styles() {
 		'threejs-detector',
 		get_stylesheet_directory_uri() . '/js/Detector.min.js',
 		array( 'threejs' ),
-		'0.1.0',
+		'1.2.0',
 		true
 	);
 
@@ -52,7 +52,7 @@ function three_theme_enqueue_styles() {
 		'threejs-deviceorientation',
 		get_stylesheet_directory_uri() . '/js/DeviceOrientationControls.min.js',
 		array( 'threejs' ),
-		'0.1.0',
+		'1.2.0',
 		true
 	);
 
@@ -60,7 +60,7 @@ function three_theme_enqueue_styles() {
 		'three-theme',
 		get_stylesheet_directory_uri() . '/js/three-theme.min.js',
 		array( 'threejs-detector' ),
-		'0.1.0',
+		'1.2.0',
 		true
 	);
 }
