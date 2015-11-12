@@ -6,13 +6,14 @@ if ( ! isset( $content_width ) )
 add_action( 'after_setup_theme', 'three_theme_after_setup_theme_01' );
 
 function three_theme_after_setup_theme_01() {
+	// disable custom header
 	remove_action( 'after_setup_theme', 'twentythirteen_custom_header_setup', 11 );
 }
 
 add_action( 'after_setup_theme', 'three_theme_after_setup_theme_02', 11 );
 
 function three_theme_after_setup_theme_02() {
-	remove_action( 'after_setup_theme', 'twentythirteen_custom_header_setup', 11 );
+	// change thumbnail size to 750px
 	set_post_thumbnail_size( 750, 270, true );
 }
 
