@@ -119,10 +119,24 @@ function animate() {
 	if ( position > 8000 ) {
 		return;
 	}
-	camera.position.z = -position + 8000;
-	if ( enable_orientation_controls ) {
-		controls.update();
-	}
 	requestAnimationFrame( animate );
-	renderer.render( scene, camera );
+	if( checkVisibleCanvas() ) {
+		camera.position.z = -position + 8000;
+		if ( enable_orientation_controls ) {
+			controls.update();
+		}
+		renderer.render( scene, camera );
+	}
+
+}
+
+
+function checkVisibleCanvas() {
+	var three,clientRect;
+	three = document.getElementById('three');
+	if( !three ) {
+		return false;
+	}
+	clientRect = three.getBoundingClientRect();
+	return clientRect.bottom > -1;
 }
