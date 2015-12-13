@@ -25,7 +25,7 @@ function three_theme_enqueue_styles() {
 	wp_enqueue_style( 'dashicons' );
 
 	wp_enqueue_style(
-		'custoom-twentythirteen-style',
+		'custom-twentythirteen-style',
 		get_stylesheet_directory_uri() . '/custom-twentythirteen.css',
 		array(),
 		THREE_THEME_VERSION
@@ -34,7 +34,7 @@ function three_theme_enqueue_styles() {
 	wp_enqueue_style(
 		'three-style',
 		get_stylesheet_directory_uri() . '/style.css',
-		array('twentythirteen-style'),
+		array('custom-twentythirteen-style'),
 		THREE_THEME_VERSION
 	);
 
