@@ -1,6 +1,6 @@
 <?php
 
-define( 'THREE_THEME_VERSION', "1.3.3" );
+define( 'THREE_THEME_VERSION', "1.3.4" );
 
 if ( ! isset( $content_width ) )
 	$content_width = 750;
@@ -25,8 +25,8 @@ function three_theme_enqueue_styles() {
 	wp_enqueue_style( 'dashicons' );
 
 	wp_enqueue_style(
-		'twentythirteen-style',
-		get_stylesheet_directory_uri() . '/twentythirteen.css',
+		'custoom-twentythirteen-style',
+		get_stylesheet_directory_uri() . '/custom-twentythirteen.css',
 		array(),
 		THREE_THEME_VERSION
 	);
