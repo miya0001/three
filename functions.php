@@ -1,5 +1,7 @@
 <?php
 
+define( 'THREE_THEME_VERSION', "1.3.3" );
+
 if ( ! isset( $content_width ) )
 	$content_width = 750;
 
@@ -26,21 +28,21 @@ function three_theme_enqueue_styles() {
 		'twentythirteen-style',
 		get_stylesheet_directory_uri() . '/twentythirteen.css',
 		array(),
-		'1.3.2'
+		THREE_THEME_VERSION
 	);
 
 	wp_enqueue_style(
 		'three-style',
 		get_stylesheet_directory_uri() . '/style.css',
 		array('twentythirteen-style'),
-		'1.3.2'
+		THREE_THEME_VERSION
 	);
 
 	wp_enqueue_script(
 		'threejs',
 		get_stylesheet_directory_uri() . '/js/three.min.js',
 		array(),
-		'1.3.2',
+		THREE_THEME_VERSION,
 		true
 	);
 
@@ -48,7 +50,7 @@ function three_theme_enqueue_styles() {
 		'threejs-detector',
 		get_stylesheet_directory_uri() . '/js/Detector.min.js',
 		array( 'threejs' ),
-		'1.3.2',
+		THREE_THEME_VERSION,
 		true
 	);
 
@@ -56,7 +58,7 @@ function three_theme_enqueue_styles() {
 		'threejs-deviceorientation',
 		get_stylesheet_directory_uri() . '/js/DeviceOrientationControls.min.js',
 		array( 'threejs' ),
-		'1.3.2',
+		THREE_THEME_VERSION,
 		true
 	);
 
@@ -64,7 +66,7 @@ function three_theme_enqueue_styles() {
 		'three-theme',
 		get_stylesheet_directory_uri() . '/js/three-theme.min.js',
 		array( 'threejs-detector' ),
-		'1.3.2',
+		THREE_THEME_VERSION,
 		true
 	);
 }
