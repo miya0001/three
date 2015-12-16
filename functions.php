@@ -1,6 +1,6 @@
 <?php
 
-define( 'THREE_THEME_VERSION', "1.3.5" );
+define( 'THREE_THEME_VERSION', "1.3.6" );
 
 if ( ! isset( $content_width ) )
 	$content_width = 750;

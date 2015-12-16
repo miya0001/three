@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/miya0001/three.svg)](https://travis-ci.org/miya0001/three)
 
-Three theme is a child theme of Twenty Thirteen . It has a full-screen 3D effect.
+Three theme is a child theme of Twenty Thirteen . It has a full-screen 3D-VR effect on smartphone.
 
 ![](https://raw.githubusercontent.com/miya0001/three/master/screenshot.png)
 
